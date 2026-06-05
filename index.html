@@ -1306,6 +1306,10 @@ const obs = new IntersectionObserver(entries => {
 document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 
 buildGallery();
+
+/* ── SCROLL TO TOP ON LOAD ────────────────────────────────── */
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+window.addEventListener('load', () => window.scrollTo(0, 0));
 </script>
 </body>
 </html>
